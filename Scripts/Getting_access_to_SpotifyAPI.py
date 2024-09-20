@@ -4,13 +4,10 @@ import base64
 from requests import post
 import json
 
-# path = os.path.dirname(os.path.abspath('Main_python.py'))+'\\Used_files\\'
-# load_dotenv(f'{path}.env')
-# client_id = os.getenv('client_id')
-# client_secret = os.getenv('client_secret')
-
-client_id = '000c09d80df641f7bd9d890e4abfba2d'
-client_secret = '105ccc4f43344168887a7380b8b94340'
+path = os.path.dirname(os.path.abspath('Main_python.py'))+'\\Used_files\\'
+load_dotenv(f'{path}.env')
+client_id = os.getenv('client_id')
+client_secret = os.getenv('client_secret')
 
 def get_token():
     auth_string = client_id + ":" + client_secret
