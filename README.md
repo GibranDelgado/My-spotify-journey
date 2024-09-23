@@ -1,23 +1,17 @@
-Thank you for your interest in my project.
+# My spotify journey
+Thank you for your interest in my work. This project was made with the intention of making a more in-depth analyzis about my streaming history data, similar to the "Spotify wrapped" but taking in consideration aspects like albums, the release year of the music that I listen, my activity throughout the day, etc.
 
 If you want to get the elements to recreate the dashboard, taking these points in considerations:
 
-1. Once you have downloaded your own data, you will get a "my_spotify_data" zip file. The only file you are going to need from there is the "StreamingHistory_music_0" JSON file. Put this file into the "Used_files" folder.
+## Get your own spotify data
+In the "References" section you will find a link to request your streaming history data. You will be able to download your data in a timelapse of five days approximately. Once you have downloaded your data, you will get a "my_spotify_data" zip file. The only file that you will need from there is the "StreamingHistory_music_0" JSON file.
 
-2. In order to use the Spotify Web API, you will have to create an account in Spotify to developers and then create a project. Once made this, you need to replace the "client id" and "client secret" values from the ".env" file, ubicated in the "Used_files" folder, with your own alphanumeric codes. You can get these values clicking the "settings" button of your project.
-   
-3. If you have renamed the JSON file, you have to modify the 18th line of the "Main_python.py" script adding the new name of the file.
+## Create an account in spotify for developers
+In order to use the Spotify Web API, you will have to create an account in Spotify to developers. In the "References" section you will find a link where you can log in with your spotify account. If you click into your username a drop-down list will appear, just click "dashboard". There you can create an app. At the moment of creating your app, in the "Which API/SDKs are you planning to use?" section only select the "Web API" option, the rest of them will not be necessary. If you do not know what to put in the "Redirect URIs" section, I recommend you fill this field like this: "http://localhost:1410/" (excluding the commas). Once you have created your app, go to "settings", copy the "Client ID" and "Client secret" and then replace them in the "Used files" folder.
 
-4. Spotify use the utc time zone, so you can modify the 16th line of the "Main_python.py" script replacing the value with your time zone difference. For example, I chose "-6" because I use the Mexico city time zone. If you agree with using the utc time zone, just adjust this value to 0.
-
-5. Run the "Main_python.py" script. This going to create a "Spotify_results" folder with the excel files required.
-
-6. Then, run the "Main_sqlite.py" script. This going to create a "Queries_results" folder with the excel files created by the sql queries. These are the files that you are going to use to recreate the dashboard.
-
-If you want to add a new query, just write it at the bottom of the "queries.txt" file, respecting the order. If the Spotify Web API does not allow you make more calls, maybe you are exceeding the rate limit established by spotify (429 error). One way to solve this problem is creating another project and modifying the "client id" and "client secret" in the ".env", just as the 4 point mentioned before.
-
-References:
-
-Download your spotify data: https://www.spotify.com/us/account/privacy/
-
-Spotify for developers: https://developer.spotify.com/
+## Folders
+### Used files
+This folder contains two files: a ".env" file where your credentials will be stored and a text file "queries.txt" that contains all the queries used to create the dashboard. 
+## Scripts
+1. Getting_access_to_SpotifyAPI.py: This script contains two functions: "get_token" returns a token based on your credentials and the "get_auth_header" returns the authentication to required to use the API.
+2. Spotify_utilities: This script acts like a 
