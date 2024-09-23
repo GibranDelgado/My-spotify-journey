@@ -14,4 +14,5 @@ In order to use the Spotify Web API, you will have to create an account in Spoti
 This folder contains two files: a ".env" file where your credentials will be stored and a text file "queries.txt" that contains all the queries used to create the dashboard. 
 ## Scripts
 1. Getting_access_to_SpotifyAPI.py: This script contains two functions: "get_token" returns a token based on your credentials and the "get_auth_header" returns the authentication to required to use the API.
-2. Spotify_utilities: This script acts like a 
+2. Spotify_utilities: This script acts as a library which contains many functions in order to get the corresponding information about artists, albums or tracks as applicable. 
+3. 
